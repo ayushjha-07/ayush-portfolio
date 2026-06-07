@@ -1,6 +1,6 @@
 services:
   - type: web
     name: ayush-portfolio
-    env: static
+    runtime: static
     buildCommand: npm run build
-    publishPath: out
+    staticPublishPath: ./out
