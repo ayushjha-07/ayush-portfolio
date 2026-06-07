@@ -14,35 +14,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ayush.dev"),
   title: "Ayush Kumar Jha | Software Engineer Portfolio",
-  description: "Portfolio of Ayush Kumar Jha, a Software Engineer specializing in React.js, Next.js, TypeScript, and high-performance algorithms. Exploring scalable web solutions and virtual memory management systems.",
+  description: "Aspiring Software Engineer skilled in Java, React.js, Next.js, JavaScript, Python, and Data Structures & Algorithms. Explore projects, internships, certifications, and achievements.",
   keywords: [
-    "Ayush Kumar Jha",
     "Software Engineer",
-    "Portfolio",
-    "Next.js Developer",
+    "Java Developer",
     "React Developer",
-    "TypeScript",
-    "C++ Developer",
-    "Data Structures and Algorithms",
-    "A2IT Mohali",
-    "CGC Jhanjeri",
-    "Web Development Intern"
+    "Next.js",
+    "Frontend Developer",
+    "Portfolio",
+    "Computer Science Student",
+    "Web Developer",
+    "JavaScript",
+    "Python"
   ],
   authors: [{ name: "Ayush Kumar Jha" }],
   creator: "Ayush Kumar Jha",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio-wpvl.onrender.com", // Keeping their current domain reference
+    url: "https://ayush.dev",
     title: "Ayush Kumar Jha | Software Engineer Portfolio",
-    description: "Building scalable web solutions and solving complex algorithmic problems.",
+    description: "Portfolio showcasing projects, skills, internships, certifications, and achievements.",
     siteName: "Ayush Kumar Jha Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Ayush Kumar Jha | Software Engineer Portfolio",
-    description: "Building scalable web solutions and solving complex algorithmic problems.",
+    description: "Portfolio showcasing projects, skills, internships, certifications, and achievements.",
     creator: "@ayushjha07",
   },
   robots: {
@@ -56,6 +59,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayush Kumar Jha",
+    "url": "https://ayush.dev",
+    "jobTitle": "Software Engineer",
+    "sameAs": [
+      "https://github.com/ayushjha-07",
+      "https://linkedin.com/in/ayushjha07"
+    ]
+  };
+
   return (
     <html
       lang="en"
@@ -63,6 +78,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-theme-bg text-theme-text antialiased transition-colors duration-300">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
           {children}
         </ThemeProvider>

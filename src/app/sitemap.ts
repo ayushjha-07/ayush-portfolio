@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://portfolio-wpvl.onrender.com";
+  const baseUrl = "https://ayush.dev";
   return [
     {
       url: baseUrl,

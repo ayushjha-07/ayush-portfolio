@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://portfolio-wpvl.onrender.com";
+  const baseUrl = "https://ayush.dev";
   return {
     rules: {
       userAgent: "*",
