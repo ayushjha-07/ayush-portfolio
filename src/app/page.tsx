@@ -1,17 +1,20 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
-import Stats from "@/components/Stats";
-import CodingProfiles from "@/components/CodingProfiles";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
-import Certifications from "@/components/Certifications";
-import Achievements from "@/components/Achievements";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+
+// Lazy load below-the-fold components for bundle optimization
+const Stats = dynamic(() => import("@/components/Stats"));
+const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
+const Skills = dynamic(() => import("@/components/Skills"));
+const Projects = dynamic(() => import("@/components/Projects"));
+const Experience = dynamic(() => import("@/components/Experience"));
+const Education = dynamic(() => import("@/components/Education"));
+const Certifications = dynamic(() => import("@/components/Certifications"));
+const Achievements = dynamic(() => import("@/components/Achievements"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
   return (

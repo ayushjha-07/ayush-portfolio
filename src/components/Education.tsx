@@ -142,7 +142,7 @@ export default function Education() {
 
                   {item.coursework && (
                     <div className="mt-2">
-                      <h4 className="text-xs font-mono text-theme-text-sec/60 uppercase tracking-wider mb-3">// Key Coursework</h4>
+                      <h4 className="text-xs font-mono text-theme-text-sec/60 uppercase tracking-wider mb-3">{"// Key Coursework"}</h4>
                       <div className="flex flex-wrap gap-2">
                         {item.coursework.map((course) => (
                           <span

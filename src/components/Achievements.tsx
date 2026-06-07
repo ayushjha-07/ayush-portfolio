@@ -3,8 +3,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { 
-  Trophy, Lightbulb, Zap, Award, Flame, ExternalLink, 
-  Cpu, BookOpen, Briefcase, Code2, GraduationCap 
+  Lightbulb, Zap, Award, Flame, ExternalLink, Cpu 
 } from "lucide-react";
 import SpotlightCard from "./SpotlightCard";
 
@@ -124,14 +123,7 @@ export default function Achievements() {
 
   const featuredAchievements = achievementsData.filter((a) => a.featured);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: (idx: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: idx * 0.08, duration: 0.6, ease: "easeOut" as const },
-    }),
-  };
+
 
   const bannerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -191,7 +183,7 @@ export default function Achievements() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredAchievements.map((item, idx) => (
+            {featuredAchievements.map((item) => (
               <a
                 key={item.title}
                 href={item.link}
@@ -242,7 +234,7 @@ export default function Achievements() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {achievementsData.filter(a => !a.featured).map((item, idx) => (
+            {achievementsData.filter(a => !a.featured).map((item) => (
               <a
                 key={item.title}
                 href={item.link}

@@ -249,15 +249,7 @@ export default function Certifications() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.95, y: 15 },
-    visible: (idx: number) => ({
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { delay: idx * 0.06, duration: 0.5, ease: "easeOut" as const },
-    }),
-  };
+
 
   return (
     <section id="certifications" className="py-24 relative overflow-hidden text-theme-text border-b border-theme-border transition-colors duration-300">

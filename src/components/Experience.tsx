@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { Briefcase, Calendar, MapPin, CheckCircle2 } from "lucide-react";
+import { Briefcase, Calendar, MapPin } from "lucide-react";
 
 interface ExpItem {
   role: string;
@@ -87,7 +87,7 @@ export default function Experience() {
           animate={controls}
           className="relative border-l-2 border-emerald-500/30 dark:border-emerald-500/20 ml-4 md:ml-8 pl-8 md:pl-12 py-2 flex flex-col gap-12"
         >
-          {experienceData.map((item, idx) => (
+          {experienceData.map((item) => (
             <motion.div
               key={item.company}
               variants={itemVariants}

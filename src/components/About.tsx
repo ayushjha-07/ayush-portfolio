@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { Cpu, Target, Compass, Award, BookOpen } from "lucide-react";
+import { Cpu, Target, Compass, BookOpen } from "lucide-react";
 
 export default function About() {
   const containerRef = useRef(null);

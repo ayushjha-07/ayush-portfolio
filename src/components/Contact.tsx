@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Mail, Phone, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import confetti from "canvas-confetti";
 import { Github, Linkedin } from "./BrandIcons";
 
@@ -115,7 +115,7 @@ export default function Contact() {
         </div>
         <div>
           <h4 className="text-sm font-bold text-slate-900 dark:text-white">Message Sent!</h4>
-          <p className="text-xs text-slate-500 dark:text-gray-400 font-medium">Logged in mock database. I'll get back to you.</p>
+          <p className="text-xs text-slate-500 dark:text-gray-400 font-medium">Logged in mock database. I&apos;ll get back to you.</p>
         </div>
       </div>
 
@@ -123,7 +123,7 @@ export default function Contact() {
         {/* Title */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-            Let's Connect and Build Something Amazing
+            Let&apos;s Connect and Build Something Amazing
           </h2>
           <div className="h-1 w-20 bg-emerald-500 mx-auto mt-4 rounded-full" />
         </div>
@@ -143,7 +143,7 @@ export default function Contact() {
                 <Mail size={20} />
               </div>
               <div>
-                <h4 className="text-xs font-mono text-theme-text-sec/60 uppercase tracking-wider">// Email</h4>
+                <h4 className="text-xs font-mono text-theme-text-sec/60 uppercase tracking-wider">{"// Email"}</h4>
                 <a href="mailto:jhaayushkumar18@gmail.com" className="text-sm font-semibold text-slate-800 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   jhaayushkumar18@gmail.com
                 </a>
@@ -156,12 +156,13 @@ export default function Contact() {
                 <Phone size={20} />
               </div>
               <div>
-                <h4 className="text-xs font-mono text-theme-text-sec/60 uppercase tracking-wider">// Phone</h4>
+                <h4 className="text-xs font-mono text-theme-text-sec/60 uppercase tracking-wider">{"// Phone"}</h4>
                 <a href="tel:+919905315622" className="text-sm font-semibold text-slate-800 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   +91 99053 15622
                 </a>
               </div>
             </div>
+
  
             {/* Social Panel */}
             <div className="flex gap-4">

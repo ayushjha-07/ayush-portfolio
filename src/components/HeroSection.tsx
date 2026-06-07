@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Download, ArrowRight, Mail, Sparkles, Terminal, Code2 } from "lucide-react";
+import { motion } from "framer-motion";
+import { Download, ArrowRight, Mail, Sparkles, Code2 } from "lucide-react";
 import ParticlesBg from "./ParticlesBg";
-import { Github, Linkedin } from "./BrandIcons";
 
 // Custom SVG Floating Tech Stack Icons
 const ReactIcon = () => (
@@ -48,21 +47,15 @@ const GitIcon = () => (
   </svg>
 );
 
-export default function HeroSection() {
-  const roles = [
-    "Building Scalable Web Applications",
-    "React.js & Next.js Developer",
-    "Java Developer",
-    "Problem Solver",
-    "Software Engineering Enthusiast"
-  ];
-  
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
+const roles = [
+  "Building Scalable Web Applications",
+  "React.js & Next.js Developer",
+  "Java Developer",
+  "Problem Solver",
+  "Software Engineering Enthusiast"
+];
 
-  // Terminal Typing Animation Code Code
-  const codeSnippet = `public class SolutionFinder {
+const codeSnippet = `public class SolutionFinder {
     public static void main(String[] args) {
         Developer ayush = new Developer("Ayush Jha");
         ayush.skills = new String[]{"Java", "React", "Next.js"};
@@ -74,7 +67,11 @@ export default function HeroSection() {
         ayush.solveAlgorithms(274 /* Solved */);
     }
 }`;
-  
+
+export default function HeroSection() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
   const [typedCode, setTypedCode] = useState("");
 
   // Fix recursive typing timer loop

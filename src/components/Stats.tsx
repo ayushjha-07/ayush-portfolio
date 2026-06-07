@@ -20,8 +20,8 @@ function Counter({ target, suffix = "", duration = 1500, trigger }: CounterProps
     let start = 0;
     const end = target;
     if (start === end) {
-      setCount(end);
-      return;
+      const t = setTimeout(() => setCount(end), 0);
+      return () => clearTimeout(t);
     }
 
     const incrementTime = 15;
@@ -91,7 +91,7 @@ export default function Stats() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {statsData.map((stat, idx) => (
+          {statsData.map((stat) => (
             <div
               key={stat.title}
               className="bg-theme-card/75 backdrop-blur-md border border-theme-border shadow-theme-card rounded-2xl p-6 text-center flex flex-col items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-theme-primary/30 hover:shadow-theme-primary/10"
