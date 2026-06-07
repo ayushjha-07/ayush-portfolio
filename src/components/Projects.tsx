@@ -6,6 +6,7 @@ import { ExternalLink, Server, ShoppingCart, Cpu } from "lucide-react";
 import Image from "next/image";
 import { Github } from "./BrandIcons";
 import SpotlightCard from "./SpotlightCard";
+import Magnetic from "./Magnetic";
 
 interface Project {
   id: number;
@@ -288,26 +289,30 @@ export default function Projects() {
                   </div>
 
                   {/* CTA Buttons */}
-                  <div className="flex gap-3 px-6 pb-6 mt-auto">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-1.5 py-2.5 border border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-200 hover:border-emerald-500/30 hover:bg-emerald-500/5 hover:text-emerald-600 dark:hover:text-emerald-400 rounded-xl text-xs font-semibold transition-all duration-200"
-                    >
-                      <Github size={14} />
-                      <span>Codebase</span>
-                    </a>
-                    {project.demo && (
+                  <div className="flex gap-3 px-6 pb-6 mt-auto relative z-30 w-full">
+                    <Magnetic className="flex-1 flex">
                       <a
-                        href={project.demo}
+                        href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-1.5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-semibold shadow-[0_2px_8px_rgba(16,185,129,0.12)] dark:shadow-[0_4px_12px_rgba(16,185,129,0.25)] transition-all duration-200"
+                        className="w-full flex items-center justify-center gap-1.5 py-2.5 border border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-200 hover:border-emerald-500/30 hover:bg-emerald-500/5 hover:text-emerald-600 dark:hover:text-emerald-400 rounded-xl text-xs font-semibold transition-all duration-300 hover:-translate-y-0.5"
                       >
-                        <ExternalLink size={14} />
-                        <span>Live Demo</span>
+                        <Github size={14} />
+                        <span>Codebase</span>
                       </a>
+                    </Magnetic>
+                    {project.demo && (
+                      <Magnetic className="flex-1 flex">
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full flex items-center justify-center gap-1.5 py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white rounded-xl text-xs font-semibold shadow-[0_4px_14px_rgba(16,185,129,0.25)] hover:shadow-[0_6px_20px_rgba(16,185,129,0.4)] transition-all duration-300 hover:-translate-y-0.5"
+                        >
+                          <ExternalLink size={14} />
+                          <span>Live Demo</span>
+                        </a>
+                      </Magnetic>
                     )}
                   </div>
                 </SpotlightCard>

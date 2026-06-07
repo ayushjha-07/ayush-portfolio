@@ -11,15 +11,27 @@ export default function SpotlightCard({ children, className = "" }: SpotlightCar
   const cardRef = useRef<HTMLDivElement>(null);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
+  const [rotation, setRotation] = useState({ rx: 0, ry: 0 });
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     const card = cardRef.current;
     if (!card) return;
     const rect = card.getBoundingClientRect();
-    setCoords({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    });
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    setCoords({ x, y });
+
+    // Calculate rotation: max 6 degrees tilt
+    const w = rect.width;
+    const h = rect.height;
+    const rx = ((y - h / 2) / (h / 2)) * -6;
+    const ry = ((x - w / 2) / (w / 2)) * 6;
+    setRotation({ rx, ry });
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setRotation({ rx: 0, ry: 0 });
   };
 
   return (
@@ -27,11 +39,15 @@ export default function SpotlightCard({ children, className = "" }: SpotlightCar
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseLeave={handleMouseLeave}
       className={`relative overflow-hidden rounded-2xl border border-theme-border bg-theme-card/75 backdrop-blur-xl shadow-theme-card transition-all duration-300 ${className}`}
       style={{
         "--mouse-x": `${coords.x}px`,
         "--mouse-y": `${coords.y}px`,
+        transform: isHovered
+          ? `perspective(1000px) rotateX(${rotation.rx}deg) rotateY(${rotation.ry}deg) scale3d(1.02, 1.02, 1.02)`
+          : "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
+        transition: isHovered ? "transform 0.1s ease-out, border-color 0.3s" : "transform 0.5s ease-out, border-color 0.3s",
       } as React.CSSProperties}
     >
       {/* Background Spotlight Layer */}
