@@ -19,6 +19,7 @@ const Achievements = dynamic(() => import("@/components/Achievements"));
 const MyJourney = dynamic(() => import("@/components/MyJourney"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const OpenSource = dynamic(() => import("@/components/OpenSource"));
+const DevDashboard = dynamic(() => import("@/components/DevDashboard"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
@@ -72,6 +73,9 @@ export default function Home() {
 
         {/* Open Source & Community profile */}
         <OpenSource />
+
+        {/* Developer Dashboard analytics */}
+        <DevDashboard />
 
         {/* Connect CTAs Form */}
         <Contact />
