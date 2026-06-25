@@ -11,6 +11,7 @@ const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
 const Projects = dynamic(() => import("@/components/Projects"));
+const ProjectCaseStudies = dynamic(() => import("@/components/ProjectCaseStudies"));
 const Experience = dynamic(() => import("@/components/Experience"));
 const Education = dynamic(() => import("@/components/Education"));
 const Certifications = dynamic(() => import("@/components/Certifications"));
@@ -44,6 +45,9 @@ export default function Home() {
 
         {/* Projects Showcase cards with Mockups */}
         <Projects />
+
+        {/* Project Case Studies deep dive */}
+        <ProjectCaseStudies />
 
         {/* Internships Timeline */}
         <Experience />
