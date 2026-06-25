@@ -16,6 +16,7 @@ const Experience = dynamic(() => import("@/components/Experience"));
 const Education = dynamic(() => import("@/components/Education"));
 const Certifications = dynamic(() => import("@/components/Certifications"));
 const Achievements = dynamic(() => import("@/components/Achievements"));
+const MyJourney = dynamic(() => import("@/components/MyJourney"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
@@ -60,6 +61,9 @@ export default function Home() {
 
         {/* Interactive Milestones Badges */}
         <Achievements />
+
+        {/* My Journey interactive timeline */}
+        <MyJourney />
 
         {/* Connect CTAs Form */}
         <Contact />
