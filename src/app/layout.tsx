@@ -68,7 +68,11 @@ export default function RootLayout({
     "jobTitle": "Software Engineer",
     "sameAs": [
       "https://github.com/ayushjha-07",
-      "https://linkedin.com/in/ayushjha07"
+      "https://linkedin.com/in/ayushjha07",
+      "https://www.instagram.com/ayushjha__07/",
+      "https://www.facebook.com/share/1DKrswscHk/",
+      "https://pin.it/69AL65Dz8",
+      "https://wa.me/919905315622"
     ]
   };
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Mail, ArrowUp, Terminal } from "lucide-react";
-import { Github, Linkedin } from "@/components/BrandIcons";
+import { Github, Linkedin, Instagram, Facebook, Pinterest, Whatsapp } from "@/components/BrandIcons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -51,6 +51,42 @@ export default function Footer() {
               aria-label="LinkedIn Profile"
             >
               <Linkedin size={16} />
+            </a>
+            <a
+              href="https://www.instagram.com/ayushjha__07/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 dark:text-gray-500 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+              aria-label="Instagram Profile"
+            >
+              <Instagram size={16} />
+            </a>
+            <a
+              href="https://www.facebook.com/share/1DKrswscHk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 dark:text-gray-500 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+              aria-label="Facebook Profile"
+            >
+              <Facebook size={16} />
+            </a>
+            <a
+              href="https://pin.it/69AL65Dz8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 dark:text-gray-500 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+              aria-label="Pinterest Profile"
+            >
+              <Pinterest size={16} />
+            </a>
+            <a
+              href="https://wa.me/919905315622"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 dark:text-gray-500 hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+              aria-label="WhatsApp"
+            >
+              <Whatsapp size={16} />
             </a>
             <a
               href="mailto:jhaayushkumar18@gmail.com"

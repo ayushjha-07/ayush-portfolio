@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import confetti from "canvas-confetti";
-import { Github, Linkedin } from "./BrandIcons";
+import { Github, Linkedin, Instagram, Facebook, Pinterest } from "./BrandIcons";
 
 interface FormState {
   name: string;
@@ -165,38 +165,113 @@ export default function Contact() {
 
  
             {/* Social Panel */}
-            <div className="flex gap-4">
-              {/* GitHub Link */}
-              <a
-                href="https://github.com/ayushjha-07"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center gap-3 p-5 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                  <Github size={18} />
-                </div>
-                <div>
-                  <h4 className="text-[10px] font-mono text-theme-text-sec/60 uppercase tracking-wider">GitHub</h4>
-                  <span className="text-xs font-semibold text-slate-800 dark:text-white">ayushjha-07</span>
-                </div>
-              </a>
- 
-              {/* LinkedIn Link */}
-              <a
-                href="https://linkedin.com/in/ayushjha07"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center gap-3 p-5 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
-              >
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
-                  <Linkedin size={18} />
-                </div>
-                <div>
-                  <h4 className="text-[10px] font-mono text-theme-text-sec/60 uppercase tracking-wider">LinkedIn</h4>
-                  <span className="text-xs font-semibold text-slate-800 dark:text-white">ayushjha07</span>
-                </div>
-              </a>
+            <div className="flex flex-col gap-4">
+              <div className="flex gap-4">
+                {/* GitHub Link */}
+                <a
+                  href="https://github.com/ayushjha-07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center gap-3 p-5 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                    <Github size={18} />
+                  </div>
+                  <div>
+                    <h4 className="text-[10px] font-mono text-theme-text-sec/60 uppercase tracking-wider">GitHub</h4>
+                    <span className="text-xs font-semibold text-slate-800 dark:text-white">ayushjha-07</span>
+                  </div>
+                </a>
+   
+                {/* LinkedIn Link */}
+                <a
+                  href="https://linkedin.com/in/ayushjha07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center gap-3 p-5 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
+                    <Linkedin size={18} />
+                  </div>
+                  <div>
+                    <h4 className="text-[10px] font-mono text-theme-text-sec/60 uppercase tracking-wider">LinkedIn</h4>
+                    <span className="text-xs font-semibold text-slate-800 dark:text-white">ayushjha07</span>
+                  </div>
+                </a>
+              </div>
+
+              <div className="grid grid-cols-3 gap-3">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/ayushjha__07/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3 p-4 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <Instagram size={18} />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-[9px] font-mono text-theme-text-sec/60 uppercase tracking-wider truncate">Instagram</h4>
+                    <span className="text-[11px] font-semibold text-slate-800 dark:text-white truncate block">ayush__07</span>
+                  </div>
+                </a>
+
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/share/1DKrswscHk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3 p-4 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <Facebook size={18} />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-[9px] font-mono text-theme-text-sec/60 uppercase tracking-wider truncate">Facebook</h4>
+                    <span className="text-[11px] font-semibold text-slate-800 dark:text-white truncate block">Ayush Jha</span>
+                  </div>
+                </a>
+
+                {/* Pinterest */}
+                <a
+                  href="https://pin.it/69AL65Dz8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3 p-4 rounded-2xl bg-theme-card/75 border border-theme-border hover:border-emerald-500/30 hover:bg-slate-100 dark:hover:bg-white/5 shadow-theme-card transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+                    <Pinterest size={18} className="text-emerald-600 dark:text-emerald-400" />
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-[9px] font-mono text-theme-text-sec/60 uppercase tracking-wider truncate">Pinterest</h4>
+                    <span className="text-[11px] font-semibold text-slate-800 dark:text-white truncate block">ayush__07</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            {/* Support / Sponsor Block */}
+            <div className="p-6 rounded-2xl bg-slate-50/50 dark:bg-theme-card/75 border border-slate-200 dark:border-theme-border shadow-theme-card flex flex-col items-center gap-4 text-center mt-2 transition-all duration-300">
+              <div className="flex flex-col items-center gap-1">
+                <h4 className="text-sm font-bold text-slate-900 dark:text-white">Support My Work</h4>
+                <p className="text-xs text-theme-text-sec leading-relaxed max-w-xs">
+                  If you like my projects or want to sponsor my open-source work, feel free to scan the QR below!
+                </p>
+              </div>
+              <div className="relative p-3 rounded-xl bg-white dark:bg-white border border-slate-100 dark:border-slate-800 shadow-[0_8px_20px_rgba(0,0,0,0.06)] group">
+                <img
+                  src="/assets/upi_qr.jpg"
+                  alt="Ayush Jha UPI QR Code"
+                  className="w-40 h-40 object-contain transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="flex flex-col items-center gap-0.5">
+                <span className="text-[10px] font-mono text-theme-text-sec/60 uppercase tracking-wider">UPI ID</span>
+                <span className="text-xs font-mono font-bold text-slate-800 dark:text-white select-all">
+                  jhaayushkumar18@okhdfcbank
+                </span>
+              </div>
             </div>
           </div>
 
