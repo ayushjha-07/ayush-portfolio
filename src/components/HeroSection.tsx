@@ -264,7 +264,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-[11px] md:text-xs font-semibold uppercase tracking-wider mb-6 shadow-[0_0_15px_rgba(16,185,129,0.05)]"
           >
             <Sparkles size={12} className="animate-spin text-emerald-400" />
-            <span>🟢 Available for Software Engineering Internships &amp; Full-Time Roles</span>
+            <span>🟢 Available for Software Engineering Internships &amp; Full-Time Opportunities</span>
           </motion.div>
 
           {/* Name */}
@@ -299,7 +299,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed max-w-xl mb-4"
           >
-            Building scalable web applications, solving complex algorithmic problems, and creating modern user experiences.
+            Building scalable web applications, deploying production-ready projects, solving 600+ DSA problems, and creating high-performance digital experiences.
           </motion.p>
  
           {/* Typing Animation Carousel */}
@@ -324,15 +324,19 @@ export default function HeroSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              whileHover={{ scale: 1.03, borderColor: "rgba(16,185,129,0.3)" }}
-              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-theme-border shadow-theme-card flex items-center gap-3 transition-colors duration-300"
+              whileHover={{ y: -5, scale: 1.02, borderColor: "rgba(16,185,129,0.35)", boxShadow: "0 0 25px rgba(16,185,129,0.15)" }}
+              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-emerald-500/15 shadow-theme-card flex items-center gap-3 transition-colors duration-300"
             >
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500">
+              <motion.div 
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.1 }}
+                className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0"
+              >
                 <Code2 size={18} />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-lg md:text-xl font-bold font-mono text-slate-900 dark:text-white leading-none">
-                  <CountUp end={270} suffix="+" />
+                  <CountUp end={600} suffix="+" />
                 </h4>
                 <p className="text-[10px] text-theme-text-sec/80 font-medium">DSA Problems Solved</p>
               </div>
@@ -344,17 +348,21 @@ export default function HeroSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              whileHover={{ scale: 1.03, borderColor: "rgba(16,185,129,0.3)" }}
-              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-theme-border shadow-theme-card flex items-center gap-3 transition-colors duration-300"
+              whileHover={{ y: -5, scale: 1.02, borderColor: "rgba(16,185,129,0.35)", boxShadow: "0 0 25px rgba(16,185,129,0.15)" }}
+              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-emerald-500/15 shadow-theme-card flex items-center gap-3 transition-colors duration-300"
             >
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500">
+              <motion.div 
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.3 }}
+                className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0"
+              >
                 <FolderGit size={18} />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-lg md:text-xl font-bold font-mono text-slate-900 dark:text-white leading-none">
-                  <CountUp end={3} />
+                  <CountUp end={5} />
                 </h4>
-                <p className="text-[10px] text-theme-text-sec/80 font-medium">Live Projects</p>
+                <p className="text-[10px] text-theme-text-sec/80 font-medium">Live Projects Deployed</p>
               </div>
             </motion.div>
 
@@ -364,12 +372,16 @@ export default function HeroSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              whileHover={{ scale: 1.03, borderColor: "rgba(16,185,129,0.3)" }}
-              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-theme-border shadow-theme-card flex items-center gap-3 transition-colors duration-300"
+              whileHover={{ y: -5, scale: 1.02, borderColor: "rgba(16,185,129,0.35)", boxShadow: "0 0 25px rgba(16,185,129,0.15)" }}
+              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-emerald-500/15 shadow-theme-card flex items-center gap-3 transition-colors duration-300"
             >
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500">
+              <motion.div 
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.5 }}
+                className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0"
+              >
                 <Briefcase size={18} />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-lg md:text-xl font-bold font-mono text-slate-900 dark:text-white leading-none">
                   <CountUp end={2} />
@@ -384,17 +396,21 @@ export default function HeroSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ scale: 1.03, borderColor: "rgba(16,185,129,0.3)" }}
-              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-theme-border shadow-theme-card flex items-center gap-3 transition-colors duration-300"
+              whileHover={{ y: -5, scale: 1.02, borderColor: "rgba(16,185,129,0.35)", boxShadow: "0 0 25px rgba(16,185,129,0.15)" }}
+              className="p-4 rounded-xl bg-theme-card/30 backdrop-blur-md border border-emerald-500/15 shadow-theme-card flex items-center gap-3 transition-colors duration-300"
             >
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500">
+              <motion.div 
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut", delay: 0.7 }}
+                className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0"
+              >
                 <Award size={18} />
-              </div>
+              </motion.div>
               <div>
                 <h4 className="text-lg md:text-xl font-bold font-mono text-slate-900 dark:text-white leading-none">
                   <CountUp end={9} suffix="+" />
                 </h4>
-                <p className="text-[10px] text-theme-text-sec/80 font-medium">Certifications Earned</p>
+                <p className="text-[10px] text-theme-text-sec/80 font-medium">Technical Certifications</p>
               </div>
             </motion.div>
 
@@ -520,7 +536,7 @@ export default function HeroSection() {
                   <div><span className="text-pink-500 font-semibold">public class</span> <span className="text-emerald-400">Developer</span> {'{'}</div>
                   <div className="pl-4"><span className="text-pink-500">private String</span> name = <span className="text-emerald-300">{"\"Ayush Kumar Jha\""}</span>;</div>
                   <div className="pl-4"><span className="text-pink-500">private String[]</span> skills = {'{'} <span className="text-emerald-300">{"\"React\""}</span>, <span className="text-emerald-300">{"\"Next.js\""}</span>, <span className="text-emerald-300">{"\"Java\""}</span> {'}'};</div>
-                  <div className="pl-4"><span className="text-pink-500">private int</span> dsaProblemsSolved = <span className="text-amber-400 font-bold">270</span>;</div>
+                  <div className="pl-4"><span className="text-pink-500">private int</span> dsaProblemsSolved = <span className="text-amber-400 font-bold">600</span>;</div>
                   <div className="pl-4"><span className="text-pink-500">private boolean</span> readyToContribute = <span className="text-blue-400">true</span>;</div>
                   <br />
                   <div className="pl-4"><span className="text-pink-500">public void</span> <span className="text-blue-400">buildAwesomeUI</span>() {'{'}</div>
