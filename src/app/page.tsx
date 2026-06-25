@@ -18,6 +18,7 @@ const Certifications = dynamic(() => import("@/components/Certifications"));
 const Achievements = dynamic(() => import("@/components/Achievements"));
 const MyJourney = dynamic(() => import("@/components/MyJourney"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const OpenSource = dynamic(() => import("@/components/OpenSource"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function Home() {
@@ -68,6 +69,9 @@ export default function Home() {
 
         {/* Testimonials & Recommendations review portal */}
         <Testimonials />
+
+        {/* Open Source & Community profile */}
+        <OpenSource />
 
         {/* Connect CTAs Form */}
         <Contact />
