@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 const Stats = dynamic(() => import("@/components/Stats"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
+const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
 const Projects = dynamic(() => import("@/components/Projects"));
 const Experience = dynamic(() => import("@/components/Experience"));
 const Education = dynamic(() => import("@/components/Education"));
@@ -37,6 +38,9 @@ export default function Home() {
 
         {/* Skills Cards & Rating Meters */}
         <Skills />
+
+        {/* Tech Stack & Development Workflow */}
+        <TechWorkflow />
 
         {/* Projects Showcase cards with Mockups */}
         <Projects />
