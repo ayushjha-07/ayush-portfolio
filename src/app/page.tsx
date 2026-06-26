@@ -10,6 +10,7 @@ const Stats = dynamic(() => import("@/components/Stats"));
 const CurrentlyBuilding = dynamic(() => import("@/components/CurrentlyBuilding"));
 const WhatICanDo = dynamic(() => import("@/components/WhatICanDo"));
 const DevToolbox = dynamic(() => import("@/components/DevToolbox"));
+const TechInsights = dynamic(() => import("@/components/TechInsights"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
@@ -49,6 +50,9 @@ export default function Home() {
 
         {/* Developer Toolbox setup & workflow */}
         <DevToolbox />
+
+        {/* Tech Insights blog articles */}
+        <TechInsights />
 
         {/* Achievements & Coding Profiles */}
         <CodingProfiles />
