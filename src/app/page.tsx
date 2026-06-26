@@ -13,6 +13,7 @@ const DevToolbox = dynamic(() => import("@/components/DevToolbox"));
 const TechInsights = dynamic(() => import("@/components/TechInsights"));
 const CareerVision = dynamic(() => import("@/components/CareerVision"));
 const ProjectShowcaseGallery = dynamic(() => import("@/components/ProjectShowcaseGallery"));
+const ProjectImpact = dynamic(() => import("@/components/ProjectImpact"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
@@ -61,6 +62,9 @@ export default function Home() {
 
         {/* Interactive project showcase gallery */}
         <ProjectShowcaseGallery />
+
+        {/* Project Impact & Engineering metrics */}
+        <ProjectImpact />
 
         {/* Achievements & Coding Profiles */}
         <CodingProfiles />
