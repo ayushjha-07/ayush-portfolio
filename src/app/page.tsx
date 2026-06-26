@@ -11,6 +11,7 @@ const CurrentlyBuilding = dynamic(() => import("@/components/CurrentlyBuilding")
 const WhatICanDo = dynamic(() => import("@/components/WhatICanDo"));
 const DevToolbox = dynamic(() => import("@/components/DevToolbox"));
 const TechInsights = dynamic(() => import("@/components/TechInsights"));
+const CareerVision = dynamic(() => import("@/components/CareerVision"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
@@ -53,6 +54,9 @@ export default function Home() {
 
         {/* Tech Insights blog articles */}
         <TechInsights />
+
+        {/* Career Vision & Goals roadmap */}
+        <CareerVision />
 
         {/* Achievements & Coding Profiles */}
         <CodingProfiles />
