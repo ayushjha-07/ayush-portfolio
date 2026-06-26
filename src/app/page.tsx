@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 const Stats = dynamic(() => import("@/components/Stats"));
 const CurrentlyBuilding = dynamic(() => import("@/components/CurrentlyBuilding"));
 const WhatICanDo = dynamic(() => import("@/components/WhatICanDo"));
+const DevToolbox = dynamic(() => import("@/components/DevToolbox"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
@@ -45,6 +46,9 @@ export default function Home() {
 
         {/* What I Can Do core services grid */}
         <WhatICanDo />
+
+        {/* Developer Toolbox setup & workflow */}
+        <DevToolbox />
 
         {/* Achievements & Coding Profiles */}
         <CodingProfiles />
