@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 // Lazy load below-the-fold components for bundle optimization
 const Stats = dynamic(() => import("@/components/Stats"));
 const CurrentlyBuilding = dynamic(() => import("@/components/CurrentlyBuilding"));
+const WhatICanDo = dynamic(() => import("@/components/WhatICanDo"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
@@ -41,6 +42,9 @@ export default function Home() {
 
         {/* Currently Building developer status board */}
         <CurrentlyBuilding />
+
+        {/* What I Can Do core services grid */}
+        <WhatICanDo />
 
         {/* Achievements & Coding Profiles */}
         <CodingProfiles />
