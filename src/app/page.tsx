@@ -12,6 +12,7 @@ const WhatICanDo = dynamic(() => import("@/components/WhatICanDo"));
 const DevToolbox = dynamic(() => import("@/components/DevToolbox"));
 const TechInsights = dynamic(() => import("@/components/TechInsights"));
 const CareerVision = dynamic(() => import("@/components/CareerVision"));
+const ProjectShowcaseGallery = dynamic(() => import("@/components/ProjectShowcaseGallery"));
 const CodingProfiles = dynamic(() => import("@/components/CodingProfiles"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const TechWorkflow = dynamic(() => import("@/components/TechWorkflow"));
@@ -57,6 +58,9 @@ export default function Home() {
 
         {/* Career Vision & Goals roadmap */}
         <CareerVision />
+
+        {/* Interactive project showcase gallery */}
+        <ProjectShowcaseGallery />
 
         {/* Achievements & Coding Profiles */}
         <CodingProfiles />
